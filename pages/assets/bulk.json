@@ -1,0 +1,27 @@
+{
+	"items": [
+		{ "name": "Ancient Orb", "value": "ancient-orb" },
+		{ "name": "Chaos Orb", "value": "chaos" },
+		{ "name": "Exalted Orb", "value": "exa" },
+		{ "name": "Mirror Shard", "value": "mirror-shard" },
+		{ "name": "Stacked Deck", "value": "stacked-deck" },
+		{ "name": "Chayulas Breachstone", "value": "chayulas-breachstone" },
+		{ "name": "Chayulas Pure Breachstone", "value": "chayulas-pure-breachstone" },
+		{ "name": "Timeless Maraketh Emblem", "value": "timeless-maraketh-emblem" },
+		{ "name": "Timeless Templar Emblem", "value": "timeless-templar-emblem" },
+		{ "name": "Golden Oil", "value": "golden-oil" },
+		{ "name": "Pristine Fossil", "value": "pristine-fossil" },
+		{ "name": "Serrated Fossil", "value": "serrated-fossil" },
+		{ "name": "Bound Fossil", "value": "bound-fossil" },
+		{ "name": "Enchanted Fossil", "value": "enchanted-fossil" },
+		{ "name": "Faceted Fossil", "value": "faceted-fossil" },
+		{ "name": "Glyphic Fossil", "value": "glyphic-fossil" },
+		{ "name": "Sanctified Fossil", "value": "sanctified-fossil" },
+		{ "name": "House of Mirros", "value": "house-of-mirrors" },
+		{ "name": "The Fiend", "value": "the-fiend" },
+		{ "name": "The Immortal", "value": "the-immortal" },
+		{ "name": "The Doctor", "value": "the-doctor" },
+		{ "name": "The Demon", "value": "the-demon" },
+		{ "name": "Beauty Through Death", "value": "beauty-through-death" }
+	]
+}

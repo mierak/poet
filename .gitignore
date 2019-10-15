@@ -1,0 +1,7 @@
+/.next
+/.vscode
+/out/node_modules
+/out/
+now.json
+package-lock.json
+node_modules
