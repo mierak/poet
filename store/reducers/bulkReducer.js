@@ -9,39 +9,15 @@ const initialState = {
 	searchList: {
 		0: {
 			want: 'chaos',
-			have: 'exa'
+			have: 'timeless-eternal-emblem'
 		},
 		1: {
-			want: 'exa',
-			have: 'mirror-shard'
+			want: 'chaos',
+			have: 'timeless-vaal-emblem'
 		},
 		2: {
 			want: 'chaos',
-			have: 'stacked-deck'
-		},
-		3: {
-			want: 'chaos',
-			have: 'pristine-fossil'
-		},
-		4: {
-			want: 'chaos',
-			have: 'serrated-fossil'
-		},
-		5: {
-			want: 'chaos',
-			have: 'enchanted-fossil'
-		},
-		6: {
-			want: 'chaos',
-			have: 'glyphic-fossil'
-		},
-		7: {
-			want: 'chaos',
-			have: 'sanctified-fossil'
-		},
-		8: {
-			want: 'chaos',
-			have: 'bound-fossil'
+			have: 'timeless-karui-emblem'
 		}
 	},
 	lastSearchIndex: 2,
@@ -62,6 +38,14 @@ const reducerObj = {
 			...prevState,
 			searchList: searchList,
 			lastSearchIndex: newLastSearchIndex
+		};
+	},
+	[BULK.REMOVE_SEARCH]: (prevState, action) => {
+		const searchList = Object.assign({}, prevState.searchList);
+		delete searchList[action.id];
+		return {
+			...prevState,
+			searchList: searchList
 		};
 	},
 	[BULK.ADD_RESULTS]: (prevState, action) => {

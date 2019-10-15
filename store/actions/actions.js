@@ -178,6 +178,9 @@ export const setReverseBulkResults = results => {
 export const addNewSearch = () => {
 	return { type: types.BULK.ADD_NEW_SEARCH };
 };
+export const removeSearch = id => {
+	return { type: types.BULK.REMOVE_SEARCH, id };
+};
 export const toggleBulkFormVisibility = () => {
 	return { type: types.BULK.TOGGLE_SEARCH_FORM_VISIBILITY };
 };

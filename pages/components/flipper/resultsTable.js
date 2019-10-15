@@ -19,6 +19,12 @@ const ResultsTable = ({ want, have, results }) => {
 			'https://web.poecdn.com/image/Art/2DItems/Maps/EternalEmpireFragment.png?v=30c2c9438da81c410cee1f8163557706',
 		'timeless-templar-emblem':
 			'https://web.poecdn.com/image/Art/2DItems/Maps/TemplarFragment.png?v=b6527abf80550dc661af223ca1cc4767',
+		'timeless-karui-emblem':
+			'https://web.poecdn.com/image/Art/2DItems/Maps/KaruiFragment.png?v=f7bfe0a32b0c064acb8255b457c40535',
+		'timeless-eternal-emblem':
+			'https://web.poecdn.com/image/Art/2DItems/Maps/EternalEmpireFragment.png?v=30c2c9438da81c410cee1f8163557706',
+		'timeless-vaal-emblem':
+			'https://web.poecdn.com/image/Art/2DItems/Maps/VaalFragment.png?v=9c8f41e2642fbe1cac2e5ed801330f0f',
 		'golden-oil':
 			'https://web.poecdn.com/image/Art/2DItems/Currency/Oils/GoldenOil.png?v=7640c249d21dbddf0425727a2ff9b4cf',
 		'pristine-fossil':
@@ -76,7 +82,6 @@ const ResultsTable = ({ want, have, results }) => {
 				}
 			}
 		}
-		console.log('TCL: ResultsTable -> note', note);
 		if (before === '') before = amount;
 		if (after === '') after = '1';
 		before = toFixed(before, 1);
@@ -132,7 +137,8 @@ const ResultsTable = ({ want, have, results }) => {
 			want: want,
 			note: note,
 			before: before,
-			after: after
+			after: after,
+			acc: result.listing.account.name
 		};
 	});
 	const columns = [
@@ -175,7 +181,15 @@ const ResultsTable = ({ want, have, results }) => {
 		}
 	}
 
-	return <Table pagination={false} size="small" dataSource={dataSource} columns={columns} bordered></Table>;
+	return (
+		<Table
+			pagination={false}
+			size="small"
+			dataSource={dataSource}
+			columns={columns}
+			bordered
+			rowClassName={record => (record.acc === 'MieraK' || record.acc === 'EagleFist' ? 'ownAcc' : '')}></Table>
+	);
 };
 
 export default ResultsTable;
