@@ -16,7 +16,7 @@ const ResultsTable = ({ want, have, results }) => {
 		'chayulas-pure-breachstone':
 			'https://web.poecdn.com/image/Art/2DItems/Currency/Breach/BreachFragmentsChaos.png?v=fabeba4157753d08666137bb482ce18c',
 		'timeless-maraketh-emblem':
-			'https://web.poecdn.com/image/Art/2DItems/Maps/EternalEmpireFragment.png?v=30c2c9438da81c410cee1f8163557706',
+			'https://web.poecdn.com/image/Art/2DItems/Maps/MarakethFragment.png?v=0b1e038b90b3f899ce3dca06c89cf028',
 		'timeless-templar-emblem':
 			'https://web.poecdn.com/image/Art/2DItems/Maps/TemplarFragment.png?v=b6527abf80550dc661af223ca1cc4767',
 		'timeless-karui-emblem':
