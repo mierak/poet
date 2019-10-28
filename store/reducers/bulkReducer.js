@@ -18,11 +18,21 @@ const initialState = {
 		2: {
 			want: 'chaos',
 			have: 'timeless-karui-emblem'
+		},
+		3: {
+			want: 'exa',
+			have: 'timeless-templar-emblem'
+		},
+		4: {
+			want: 'exa',
+			have: 'timeless-maraketh-emblem'
 		}
 	},
-	lastSearchIndex: 2,
-	progress: 0
+	lastSearchIndex: 4,
+	progress: 0,
+	nicknameHighlight: ''
 };
+const presets = require('../../pages/assets/presets.json');
 
 const reducerObj = {
 	[BULK.SET_RESULTS]: (prevState, action) => ({ results: action.results }),
@@ -61,7 +71,6 @@ const reducerObj = {
 		};
 	},
 	[BULK.SET_HAVE]: (prevState, action) => {
-		console.log(action);
 		const newSearchList = Object.assign({}, prevState.searchList);
 		newSearchList[action.id].have = action.have;
 		return {
@@ -77,10 +86,22 @@ const reducerObj = {
 			searchList: newSearchList
 		};
 	},
+	[BULK.SET_HIGHLIGHT]: (prevState, action) => {
+		return {
+			...prevState,
+			nicknameHighlight: action.nick
+		};
+	},
 	[BULK.SET_PROGRESS]: (prevState, action) => {
 		return {
 			...prevState,
 			progress: action.percent
+		};
+	},
+	[BULK.SET_PRESET]: (prevState, action) => {
+		return {
+			...prevState,
+			searchList: presets[action.preset]
 		};
 	}
 };

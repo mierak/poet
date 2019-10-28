@@ -1,6 +1,8 @@
 import { Table } from 'antd';
+import { connect } from 'react-redux';
+import { bulkStateSelector } from 'store/reducers/rootReducer';
 
-const ResultsTable = ({ want, have, results }) => {
+const ResultsTable = ({ want, have, results, highlight }) => {
 	const images = {
 		'ancient-orb':
 			'https://web.poecdn.com/image/Art/2DItems/Currency/AncientOrb.png?v=3edb14b53b9b05e176124814aba86f94',
@@ -25,6 +27,16 @@ const ResultsTable = ({ want, have, results }) => {
 			'https://web.poecdn.com/image/Art/2DItems/Maps/EternalEmpireFragment.png?v=30c2c9438da81c410cee1f8163557706',
 		'timeless-vaal-emblem':
 			'https://web.poecdn.com/image/Art/2DItems/Maps/VaalFragment.png?v=9c8f41e2642fbe1cac2e5ed801330f0f',
+		'timeless-maraketh-splinter':
+			'https://web.poecdn.com/image/Art/2DItems/Maps/MarakethShard.png?v=e0b5a2a9dd104c9884025da7191cdb9e',
+		'timeless-templar-splinter':
+			'https://web.poecdn.com/image/Art/2DItems/Maps/TemplarShard.png?v=82d3d517ed1caa15a3dfad5f3a0a8fff',
+		'timeless-karui-splinter':
+			'https://web.poecdn.com/image/Art/2DItems/Maps/KaruiShard.png?v=e3ab494b7e170292856cd88874110b61',
+		'timeless-eternal-empire-splinter':
+			'https://web.poecdn.com/image/Art/2DItems/Maps/EternalEmpireShard.png?v=c39753adba56300b8c08f3066a79429c',
+		'timeless-vaal-splinter':
+			'https://web.poecdn.com/image/Art/2DItems/Maps/VaalShard.png?v=0a4bddb57e7c348f72bfffd3434f0e6b',
 		'golden-oil':
 			'https://web.poecdn.com/image/Art/2DItems/Currency/Oils/GoldenOil.png?v=7640c249d21dbddf0425727a2ff9b4cf',
 		'pristine-fossil':
@@ -52,6 +64,46 @@ const ResultsTable = ({ want, have, results }) => {
 		'beauty-through-death':
 			'https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?v=a8ae131b97fad3c64de0e6d9f250d743',
 		'the-demon':
+			'https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?v=a8ae131b97fad3c64de0e6d9f250d743',
+		'rusted-sulphite-scarab':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Scarabs/LesserScarabSulphite.png?v=c07b341f6d9d64654359a0abdb758c3a',
+		'polished-sulphite-scarab':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Scarabs/NormalScarabSulphite.png?v=fd2b17d31cccffb35bfc07a0dde68088',
+		'gilded-sulphite-scarab':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Scarabs/GreaterScarabSulphite.png?v=d39f02dfa31d8bb942c408e5cb15b7ef',
+		'rusted-bestiary-scarab':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Scarabs/LesserScarabBeasts.png?v=ddb914ed1c2b799263e2e12f73d8f8fc',
+		'polished-bestiary-scarab':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Scarabs/NormalScarabBeasts.png?v=3804844af213d8f5dad123f07f33d518',
+		'gilded-bestiary-scarab':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Scarabs/GreaterScarabBeasts.png?v=fa5f1ff1448d73ec81b0f1309da91129',
+		'silver-oil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Oils/SilverOil.png?v=37b466d27aad3d06b0fd97ee42322bcc',
+		'frigid-fossil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Delve/AmberFang.png?v=5ad7bc2cc225c2cc27774cf81f390506',
+		'metallic-fossil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Delve/MetallicFossil.png?v=cd53ee25a1625393929dec5f114b7f03',
+		'jagged-fossil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Delve/JaggedFossil.png?v=2939dc778481bf687e678e22885cb847',
+		'aberrant-fossil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Delve/AbberantFossil.png?v=517fe1f29702c7f6f9b11d10206ab0e2',
+		'dense-fossil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Delve/DenseFossil.png?v=bd717b705466892a7208dd62049f1ade',
+		'corroded-fossil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Delve/CorrodedFossil.png?v=13ecceed03b1b56183516130c7d8d587',
+		'prismatic-fossil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Delve/PrismaticFossil.png?v=8889a1bf7ae2cd4665bb5d42c3707ab8',
+		'shuddering-fossil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Delve/ShudderingFossil.png?v=1b98a7816e9f531d43661590b54da6f1',
+		'perfect-fossil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Delve/PerfectFossil.png?v=cbce2c743aad0314753383fa1cf220e2',
+		'encrusted-fossil':
+			'https://web.poecdn.com/image/Art/2DItems/Currency/Delve/EncrustedFossil.png?v=41de1749ab9c3acdd85cf3e16b67dfaa',
+		'the-damned':
+			'https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?v=a8ae131b97fad3c64de0e6d9f250d743',
+		'alluring-bounty':
+			'https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?v=a8ae131b97fad3c64de0e6d9f250d743',
+		'the-nurse':
 			'https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?v=a8ae131b97fad3c64de0e6d9f250d743'
 	};
 	const dataSource = results.map(result => {
@@ -145,7 +197,9 @@ const ResultsTable = ({ want, have, results }) => {
 		{
 			title: (
 				<div>
-					Get:<img src={images[want]} title={want} width="32" height="32" alt={have}></img>
+					Get:
+					<br />
+					<img src={images[want]} title={want} width="32" height="32" alt={have}></img>
 				</div>
 			),
 			dataIndex: 'want',
@@ -159,6 +213,7 @@ const ResultsTable = ({ want, have, results }) => {
 			title: (
 				<div>
 					Pay:
+					<br />
 					<img src={images[have]} title={have} width="32" height="32" alt={want} style={{ margin: 'auto' }}></img>
 				</div>
 			),
@@ -188,8 +243,14 @@ const ResultsTable = ({ want, have, results }) => {
 			dataSource={dataSource}
 			columns={columns}
 			bordered
-			rowClassName={record => (record.acc === 'MieraK' || record.acc === 'EagleFist' ? 'ownAcc' : '')}></Table>
+			rowClassName={record => (record.acc === highlight ? 'ownAcc' : '')}></Table>
 	);
 };
 
-export default ResultsTable;
+const mapStateToProps = state => {
+	const selector = bulkStateSelector(state);
+	return {
+		highlight: selector.nicknameHighlight
+	};
+};
+export default connect(mapStateToProps)(ResultsTable);

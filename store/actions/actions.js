@@ -187,3 +187,9 @@ export const toggleBulkFormVisibility = () => {
 export const setBulkProgress = percent => {
 	return { type: types.BULK.SET_PROGRESS, percent };
 };
+export const setNicknameHighlight = nick => {
+	return { type: types.BULK.SET_HIGHLIGHT, nick };
+};
+export const setBulkPreset = preset => {
+	return { type: types.BULK.SET_PRESET, preset };
+};

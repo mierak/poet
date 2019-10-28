@@ -9,7 +9,7 @@ import './assets/flipper.css';
 import styled from 'styled-components';
 
 const StyledCard = styled(Card)`
-	height: 457px;
+	height: 487px;
 	margin: 5px;
 	padding: 0 !important;
 `;
@@ -21,6 +21,9 @@ const StyledRightCol = styled(Col)`
 `;
 const StyledButton = styled(Button)`
 	width: 98%;
+`;
+const StyledResultHeading = styled.div`
+	text-align: center;
 `;
 
 const Flipper = ({ results, progress, toggleBulkFormVisibility }) => {
@@ -39,6 +42,7 @@ const Flipper = ({ results, progress, toggleBulkFormVisibility }) => {
 		return (
 			<Col lg={4} key={results.have + results.want}>
 				<StyledCard>
+					<StyledResultHeading>{results.have}</StyledResultHeading>
 					<StyledLeftCol lg={12}>
 						<ResultsTable results={results.results} want={results.want} have={results.have}></ResultsTable>
 					</StyledLeftCol>
@@ -53,7 +57,7 @@ const Flipper = ({ results, progress, toggleBulkFormVisibility }) => {
 		<div>
 			<Row>
 				<Col lg={24}>
-					<Progress percent={progress}></Progress>
+					<Progress percent={progress} showInfo={false}></Progress>
 				</Col>
 			</Row>
 			<Row>

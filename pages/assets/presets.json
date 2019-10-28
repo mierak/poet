@@ -1,0 +1,290 @@
+{
+	"mrk": {
+		"0": {
+			"want": "chaos",
+			"have": "timeless-eternal-emblem"
+		},
+		"1": {
+			"want": "chaos",
+			"have": "timeless-vaal-emblem"
+		},
+		"2": {
+			"want": "chaos",
+			"have": "timeless-karui-emblem"
+		},
+		"3": {
+			"want": "exa",
+			"have": "timeless-templar-emblem"
+		},
+		"4": {
+			"want": "exa",
+			"have": "timeless-maraketh-emblem"
+		}
+	},
+	"eaglefist": {
+		"0": {
+			"want": "chaos",
+			"have": "ancient-orb"
+		},
+		"1": {
+			"want": "exa",
+			"have": "ancient-orb"
+		},
+		"2": {
+			"want": "chaos",
+			"have": "mirror-shard"
+		},
+		"3": {
+			"want": "exa",
+			"have": "mirror-shard"
+		},
+		"4": {
+			"want": "chaos",
+			"have": "stacked-deck"
+		},
+		"5": {
+			"want": "exa",
+			"have": "stacked-deck"
+		},
+		"6": {
+			"want": "chaos",
+			"have": "chayulas-breachstone"
+		},
+		"7": {
+			"want": "exa",
+			"have": "chayulas-breachstone"
+		},
+		"8": {
+			"want": "chaos",
+			"have": "chayulas-pure-breachstone"
+		},
+		"9": {
+			"want": "exa",
+			"have": "chayulas-pure-breachstone"
+		},
+		"10": {
+			"want": "chaos",
+			"have": "timeless-maraketh-emblem"
+		},
+		"11": {
+			"want": "exa",
+			"have": "timeless-maraketh-emblem"
+		},
+		"12": {
+			"want": "chaos",
+			"have": "timeless-templar-emblem"
+		},
+		"13": {
+			"want": "exa",
+			"have": "timeless-templar-emblem"
+		},
+		"14": {
+			"want": "chaos",
+			"have": "golden-oil"
+		},
+		"15": {
+			"want": "exa",
+			"have": "golden-oil"
+		},
+		"16": {
+			"want": "chaos",
+			"have": "rusted-sulphite-scarab"
+		},
+		"17": {
+			"want": "exa",
+			"have": "rusted-sulphite-scarab"
+		},
+		"18": {
+			"want": "chaos",
+			"have": "polished-sulphite-scarab"
+		},
+		"19": {
+			"want": "exa",
+			"have": "polished-sulphite-scarab"
+		},
+		"20": {
+			"want": "chaos",
+			"have": "gilded-sulphite-scarab"
+		},
+		"21": {
+			"want": "exa",
+			"have": "gilded-sulphite-scarab"
+		},
+		"22": {
+			"want": "chaos",
+			"have": "rusted-bestiary-scarab"
+		},
+		"23": {
+			"want": "exa",
+			"have": "rusted-bestiary-scarab"
+		},
+		"24": {
+			"want": "chaos",
+			"have": "polished-bestiary-scarab"
+		},
+		"25": {
+			"want": "exa",
+			"have": "polished-bestiary-scarab"
+		},
+		"26": {
+			"want": "chaos",
+			"have": "gilded-bestiary-scarab"
+		},
+		"27": {
+			"want": "exa",
+			"have": "gilded-bestiary-scarab"
+		},
+		"28": {
+			"want": "chaos",
+			"have": "pristine-fossil"
+		},
+		"29": {
+			"want": "exa",
+			"have": "pristine-fossil"
+		},
+		"30": {
+			"want": "exa",
+			"have": "serrated-fossil"
+		},
+		"31": {
+			"want": "chaos",
+			"have": "serrated-fossil"
+		},
+		"32": {
+			"want": "exa",
+			"have": "bound-fossil"
+		},
+		"33": {
+			"want": "chaos",
+			"have": "bound-fossil"
+		},
+		"34": {
+			"want": "chaos",
+			"have": "enchanted-fossil"
+		},
+		"35": {
+			"want": "exa",
+			"have": "enchanted-fossil"
+		},
+		"36": {
+			"want": "exa",
+			"have": "faceted-fossil"
+		},
+		"37": {
+			"want": "chaos",
+			"have": "faceted-fossil"
+		},
+		"38": {
+			"want": "chaos",
+			"have": "sanctified-fossil"
+		},
+		"39": {
+			"want": "exa",
+			"have": "sanctified-fossil"
+		},
+		"40": {
+			"want": "chaos",
+			"have": "house-of-mirrors"
+		},
+		"41": {
+			"want": "exa",
+			"have": "house-of-mirrors"
+		},
+		"42": {
+			"want": "chaos",
+			"have": "the-fiend"
+		},
+		"43": {
+			"want": "exa",
+			"have": "the-fiend"
+		},
+		"44": {
+			"want": "chaos",
+			"have": "the-immortal"
+		},
+		"45": {
+			"want": "exa",
+			"have": "the-immortal"
+		},
+		"46": {
+			"want": "chaos",
+			"have": "the-doctor"
+		},
+		"47": {
+			"want": "exa",
+			"have": "the-doctor"
+		},
+		"48": {
+			"want": "chaos",
+			"have": "the-demon"
+		},
+		"49": {
+			"want": "exa",
+			"have": "the-demon"
+		},
+		"50": {
+			"want": "chaos",
+			"have": "beauty-through-death"
+		},
+		"51": {
+			"want": "exa",
+			"have": "beauty-through-death"
+		},
+		"52": {
+			"want": "chaos",
+			"have": "silver-oil"
+		},
+		"53": {
+			"want": "chaos",
+			"have": "frigid-fossil"
+		},
+		"54": {
+			"want": "chaos",
+			"have": "metallic-fossil"
+		},
+		"55": {
+			"want": "chaos",
+			"have": "jagged-fossil"
+		},
+		"56": {
+			"want": "chaos",
+			"have": "aberrant-fossil"
+		},
+		"57": {
+			"want": "chaos",
+			"have": "dense-fossil"
+		},
+		"58": {
+			"want": "chaos",
+			"have": "corroded-fossil"
+		},
+		"59": {
+			"want": "chaos",
+			"have": "prismatic-fossil"
+		},
+		"60": {
+			"want": "chaos",
+			"have": "shuddering-fossil"
+		},
+		"61": {
+			"want": "chaos",
+			"have": "perfect-fossil"
+		},
+		"62": {
+			"want": "chaos",
+			"have": "encrusted-fossil"
+		},
+		"63": {
+			"want": "chaos",
+			"have": "the-nurse"
+		},
+		"64": {
+			"want": "chaos",
+			"have": "alluring-bounty"
+		},
+		"65": {
+			"want": "chaos",
+			"have": "the-damned"
+		}
+	}
+}

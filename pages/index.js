@@ -75,7 +75,9 @@ const App = React.memo(() => {
 						<Menu.Item key="4">
 							<Icon type="setting" />
 							<span>
-								<Link href="/flipper">Flip</Link>
+								<Link href="/flipper">
+									<a>Flip</a>
+								</Link>
 							</span>
 						</Menu.Item>
 					</Menu>
